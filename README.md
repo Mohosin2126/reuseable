@@ -1,4 +1,4 @@
-## Fetching and Setting Data using `useEffect` in React
+## Fetching All and Setting Data using `useEffect` in React
 
 In this example, we demonstrate how to fetch data from an API and set it in the component state using the `useEffect` hook in React.
 
@@ -13,6 +13,10 @@ useEffect(() => {
 }, []);
 
 
+```
+## Fetching  Data using By Email
+```js
+const url = `http://localhost:5000/bookings?email=${user?.email}`;
 ```
 
 ## Fetching the data by ID using `useEffect` and `useParams` No 1
@@ -75,5 +79,34 @@ const {name, category, recipe, price, _id} = useLoaderData();
 ```
 
 
+## AXIOS
+
+### Load Data Using Axios
+```js
+const [bookings, setBookings] = useState([]);
+const url = "url";
+    useEffect(() => {
+
+        axios.get(url, {withCredentials: true})
+        .then(res => {
+            setBookings(res.data);
+        })
+    }, [url]);
+
+```
 
 
+### Post Data Using Axios
+  ```js
+
+  const user = { email };
+  axios.post('url', user, { withCredentials: true })
+                    .then(res => {
+                        console.log(res.data)
+                        if (res.data.success) {
+                           console.log("Data Posted")
+                        }
+                    })
+
+                    ```
+                    
