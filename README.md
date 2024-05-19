@@ -15,7 +15,7 @@ useEffect(() => {
 
 ```
 
-## Fetching the data by ID using `useEffect` and `useParams`
+## Fetching the data by ID using `useEffect` and `useParams` No 1
 
 ### On Button Click
 
@@ -33,7 +33,7 @@ useEffect(() => {
     element: <Elements Name>,
     loader: () => fetch("URL"),
 }
-
+ 
 ```
 
 ### In the Page to Show Particular Element by ID
@@ -47,6 +47,33 @@ useEffect(() => {
 }, [allStories, id]);
 
 ```
+## Fetching the data by ID using `useEffect` and `useParams` No 2
+
+### On Button Click
+
+```js
+
+<Link to={`/Path Name/${_id}`}>
+
+```
+### In Route Page
+
+```js
+
+{
+  
+    path: '/Path Name/:id',
+     element: <Elements Name>,
+    loader: ({params}) => fetch(`http://localhost:5000/${params.id}`)
+}
+```
+### In the Page to Show Particular Element by ID
+
+```js
+const {name, category, recipe, price, _id} = useLoaderData();
+
+```
+
 
 
 
