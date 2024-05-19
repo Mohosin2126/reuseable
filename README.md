@@ -84,9 +84,9 @@ const {name, category, recipe, price, _id} = useLoaderData();
 ### Load Data Using Axios
 ```js
 const [bookings, setBookings] = useState([]);
+
 const url = "url";
     useEffect(() => {
-
         axios.get(url, {withCredentials: true})
         .then(res => {
             setBookings(res.data);
@@ -108,5 +108,20 @@ const url = "url";
                         }
                     })
 
-                    ```
-                    
+   ```
+## Update The Data using axios
+```js
+
+   const handlesubmit = e => {
+        e.preventDefault()
+        const data = { name, gmail }
+        // send to data server
+        const url="http://localhost"
+        axios.put(url,data)
+        .then(data => {
+           console.log(data.data)
+        })  
+                   
+    }                 
+
+```
