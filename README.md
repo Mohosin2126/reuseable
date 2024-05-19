@@ -17,14 +17,14 @@ useEffect(() => {
 
 ## Fetching the data by ID using `useEffect` and `useParams`
 
-# On Button Click
+### On Button Click
 
 ```js
 
 <Link to={`/Path Name/${_id}`}>
 
 ```
-## In Route Page
+### In Route Page
 
 ```js
 
@@ -36,7 +36,7 @@ useEffect(() => {
 
 ```
 
-## In the Page to Show Particular Element by ID
+### In the Page to Show Particular Element by ID
 
 ```js
 const allStories = useLoaderData();
