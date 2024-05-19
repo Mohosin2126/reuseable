@@ -13,4 +13,40 @@ useEffect(() => {
 }, []);
 
 
+```
+
+## Fetching the data by ID using `useEffect` and `useParams`
+
+# On Button Click
+
+```js
+
+<Link to={`/Path Name/${_id}`}>
+
+```
+## In Route Page
+
+```js
+
+{
+    path: "/Path Name/:id",
+    element: <Elements Name>,
+    loader: () => fetch("URL"),
+}
+
+```
+
+## In the Page to Show Particular Element by ID
+
+```js
+const allStories = useLoaderData();
+const { id } = useParams();
+useEffect(() => {
+    const findStories = allStories?.find((story) => story._id == id);
+    setDetails(findStories || {});
+}, [allStories, id]);
+
+```
+
+
 
