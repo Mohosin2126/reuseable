@@ -77,5 +77,35 @@ useEffect(() => {
 const {name, category, recipe, price, _id} = useLoaderData();
 
 ```
+## Fetching the data by ID using `useEffect` and `useParams` No 3
+
+### On Button Click
+
+```js
+
+<Link to={`/Path Name/${_id}`}>
+
+```
+### In Route Page
+
+```js
+
+{
+  
+    path: '/Path Name/:id',
+     element: <Elements Name>,
+}
+```
+### In the Page to Show Particular Element by ID
+
+```js
+const {id} = useParams();
+//if i console id than i will get that id and than i have to load the all data using useEffect there than i have to use find method id==id 
+
+```
+
+
+
+
 
 
