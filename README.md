@@ -100,7 +100,6 @@ const {name, category, recipe, price, _id} = useLoaderData();
 
 ```js
 const {id} = useParams();
-//if i console id than i will get that id and than i have to load the all data using useEffect there than i have to use find method id==id 
 
 ```
 
